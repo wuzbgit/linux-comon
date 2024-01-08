@@ -50,14 +50,14 @@ static int reset_rf()
 {
 #if (TARGET_BOARD == t507)
 	int ret;
-	ret = system("gpio -s PE1 1 1 0 0");
+	ret = system("gpio -s PE1 1 1 0 0 > /dev/null");
 	if (ret != 0) {
 		return -1;
 	}
 
 	sleep(2);
 
-	system("gpio -s PE1 1 0 0 0");
+	system("gpio -s PE1 1 0 0 0 > /dev/null");
 #else
 	int ret = -1;
 	unsigned gpio_on = 0;
@@ -467,7 +467,7 @@ int find_RF_manufacture(const char* rfdev_)
 		{
 	    	LOG_ERROR("ERROR: read %s failed\n", aticmd);
 	    	continue;
-		}       
+		}
 
 		if(strstr(response, "Lynq")) {
 			ret = RF_LYNQ;

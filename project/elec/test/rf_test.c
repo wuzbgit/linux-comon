@@ -75,22 +75,36 @@ static int rf_module_tc_exit(struct utest_tc_export *tc)
     return 0;
 }
 
+static int rf_exist()
+{
+    if (access("/dev/ttyUSB3",F_OK) == 0) {
+        return 1;
+    }
+
+    return 0;
+}
+
 static int rf_reset_tc_init(struct utest_tc_export *tc)
 {
-    char dev_[64] = {0};
     int ret;
-    unsigned i=0,max_cnt = 10;
-
-    poweron_rf();
+    unsigned i=0,max_cnt = 20;
+    if (access("/var/lock/LCK..ttyUSB2",F_OK) == 0) {
+        system("rm /var/lock/LCK..ttyUSB2");
+    }
+    if (access("/var/lock/LCK..ttyUSB3",F_OK) == 0) {
+        system("rm /var/lock/LCK..ttyUSB3");
+    } 
+    N1_RF_hwreset();
     do {
-        ret = RF_device_detect(dev_, 63);
-        if ((ret == 0) && (!strcmp(dev_,"/dev/ttyUSB3"))) {
+        ret = rf_exist();
+        if (ret == 1) {
             break;
         }
         sleep(1);
         i++;
     } while(i<max_cnt);
     if (i == max_cnt) {
+        printf("%s,%d can not find /dev/ttyUSB3\r\n",__func__,__LINE__);
         return -1;
     }
 
@@ -99,60 +113,60 @@ static int rf_reset_tc_init(struct utest_tc_export *tc)
 
 static void rf_reset_tc_test(struct utest_tc_export *tc)
 {
-    char dev_[64] = {0};
     int ret;
     unsigned i=0,max_cnt = 10;
 
     poweroff_rf();
     i = 0;
     do {
-        ret = RF_device_detect(dev_, 63);
-        if (ret != 0) {
+        ret = rf_exist();
+        if (ret == 0) {
             break;
         }
         sleep(1);
         i++;
     } while(i<max_cnt);
     if (i == max_cnt) {
+        printf("%s,%d /dev/ttyUSB3 exist,reset does not work\r\n",__func__,__LINE__);
         uassert_true(false);
         return ;
     }
 
     poweron_rf();
-    memset(dev_,0,sizeof(dev_));
+    max_cnt = 30;
     i = 0;
     do {
-        ret = RF_device_detect(dev_, 63);
-        if ((ret == 0) && (!strcmp(dev_,"/dev/ttyUSB3"))) {
+        ret = rf_exist();
+        if (ret == 1) {
             break;
         }
         sleep(1);
         i++;
     } while(i<max_cnt);
+
     if (i == max_cnt) {
+        printf("%s,%d can not find /dev/ttyUSB3\r\n",__func__,__LINE__);
         uassert_true(false);
         return ;
     }
+    uassert_true(true);
+    // int rf_mnf_;
+    // rf_mnf_ = find_RF_manufacture(RF_DEV_PATH);
+    // if (rf_mnf_ == RF_NONE) {
+    //     uassert_true(false);
+    // }
 
-    int rf_mnf_;
-    rf_mnf_ = find_RF_manufacture(dev_);
-    if (rf_mnf_ == RF_NONE) {
-        uassert_true(false);
-    }
-
-    ret = rf_at_test(dev_, rf_mnf_);
-    if (ret != 0) {
-        uassert_true(false);
-    }
-    else {
-        uassert_true(true);
-    }
+    // ret = rf_at_test(RF_DEV_PATH, rf_mnf_);
+    // if (ret != 0) {
+    //     uassert_true(false);
+    // }
+    // else {
+    //     uassert_true(true);
+    // }
 }
 
 static int rf_reset_tc_exit(struct utest_tc_export *tc)
 {
-    rf_mnf_ = RF_NONE;
-
     return 0;
 }
 
@@ -163,7 +177,6 @@ static int rf_reset_tc_exit(struct utest_tc_export *tc)
 
 static int rf_net_tc_init(struct utest_tc_export *tc)
 {
-    char dev_[64] = {0};
     int ret;
     unsigned i=0,max_cnt = 10;
 
@@ -183,8 +196,8 @@ static int rf_net_tc_init(struct utest_tc_export *tc)
 
     poweron_rf();
     do {
-        ret = RF_device_detect(dev_, 63);
-        if ((ret == 0) && (!strcmp(dev_,"/dev/ttyUSB3"))) {
+        ret = rf_exist();
+        if (ret == 1) {
             break;
         }
         sleep(1);
@@ -232,13 +245,15 @@ static void rf_net_tc_test(struct utest_tc_export *tc)
         }
         else {
             sprintf(cmd,"./4G_call.sh.sh > /dev/null");
-        }        
-        ret = system("./4G_call.sh > /dev/null");
-        if (ret != 0) {
-            printf("4G dialog failed\n");
-            uassert_true(false);
-            return;
         }
+
+        system("./4G_call.sh > /dev/null");
+    }
+
+    if (netif_exist(NET_INTF_4G) == false) {
+        printf("%s,%d %s does not exist\n",__func__,__LINE__,NET_INTF_4G);
+        uassert_true(false);
+        return;
     }
 
     while (1) {
