@@ -341,3 +341,86 @@ error_:
     return ret;
 }
 
+/*
+ *Return:
+ * >0, if okay, return the successful times
+ * -1, if failed
+ */
+int32_t ping_intf(const int8_t *daddr, const char* intf, uint16_t id, int32_t times,uint32_t timeout)
+{
+    struct in_addr         inp;
+    struct sockaddr_in    dest;
+    int32_t          sockfd = 0, ret = 0, on = 1, itimes = 0, success = 0;
+    int interface_index;
+
+    if((NULL == daddr) || (times <= 0)) return -1;
+
+    interface_index = if_nametoindex(intf);
+    if (interface_index == 0) {
+        perror("if_nametoindex failed");
+        return -1;
+    }
+
+    if (timeout == 0) {
+        timeout = 100;
+    }
+    /*
+     * setuid(getuid());
+     */
+
+    ret = inet_pton(AF_INET, daddr, &inp);
+    if(ret <= 0){
+        ret = -1;
+        LOG_ERROR("ping: destinaiton ip address is wrong on id %d\n",id);
+        goto error_;
+    }
+
+    memset(&dest,0,sizeof dest);   
+    dest.sin_family = PF_INET;        /*PF_INET is IPV4*/     
+    dest.sin_port   = ntohs(0);
+    dest.sin_addr   = inp;
+
+    sockfd = socket(PF_INET, SOCK_RAW, IPPROTO_ICMP);
+    if(sockfd < 0){
+        ret = -1;
+        LOG_ERROR("ping: RAW socket created error on id %d\n",id); 
+        goto error_;
+    }    
+  
+    /*IP_HDRINCL: the caller fills IP header by itself*/
+    on = 1;
+    ret = setsockopt(sockfd, IPPROTO_IP, IP_HDRINCL, &on, sizeof(on));      
+    if(ret < 0){
+        ret = -1;
+        LOG_ERROR("ping: setsockopt: IP_HDRINCL failed on id %d\n",id);
+        goto error_;
+    }  
+
+    int rc = setsockopt(sockfd, SOL_SOCKET, SO_BINDTODEVICE, &interface_index, sizeof(interface_index));
+    if (rc < 0) {
+        perror("setsockopt failed");
+        close(sockfd);
+        goto error_;
+    }
+
+    itimes = success = 0;
+    do{
+        ret = ping_send(sockfd, &dest, id, itimes);
+
+        if(0 == ret){
+            ret = ping_recv(sockfd, id, itimes, timeout);
+
+            if(0 == ret) success++;
+        }
+        else {
+            LOG_ERROR("ping %s %d failed errno=%d (%s)\n",daddr,id,errno,strerror(errno));
+        }
+    }while(++itimes < times);
+
+    ret = (success > 0)? success : -1;
+
+error_:
+    if(sockfd >= 0) close(sockfd);
+
+    return ret;
+}
