@@ -290,16 +290,6 @@ static int rf_net_tc_exit(struct utest_tc_export *tc)
 static struct utest_tc_export g_rf_test[] = {
     {
         .module = "rf",
-        .name = "reset_test",
-        .run_timeout = 5000,
-        .process_fork = false,
-        .fork_assert = NULL,
-        .init       = rf_reset_tc_init,
-        .tc         = rf_reset_tc_test,
-        .cleanup    = rf_reset_tc_exit
-    },     
-    {
-        .module = "rf",
         .name = "module_test",
         .run_timeout = 5000,
         .process_fork = false,
@@ -308,6 +298,16 @@ static struct utest_tc_export g_rf_test[] = {
         .tc         = rf_module_tc_test,
         .cleanup    = rf_module_tc_exit
     },   
+    {
+        .module = "rf",
+        .name = "reset_test",
+        .run_timeout = 5000,
+        .process_fork = false,
+        .fork_assert = NULL,
+        .init       = rf_reset_tc_init,
+        .tc         = rf_reset_tc_test,
+        .cleanup    = rf_reset_tc_exit
+    },
     {
         .module = "rf",
         .name = "net_test",
