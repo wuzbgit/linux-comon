@@ -9,7 +9,7 @@
 #include <errno.h>
 #include "utest/utest.h"
 
-#define RS422_PATH      "/dev/ttymxc1"
+#define RS422_PATH      "/dev/ttymxc2"
 // 串口通用初始化函数
 static int set_opt(int fd, int nSpeed, int nBits, char nEvent, int nStop)
 {
@@ -135,14 +135,14 @@ static void rs422_tc_test(struct utest_tc_export *tc)
     char bufferR[256];
     char bufferW[256];
     char *test_str = "please enter some charcters\n";
-
+    bool status = false;
     memset(bufferR, '\0', sizeof(bufferR));
     memset(bufferW, '\0', sizeof(bufferW));
 
     if ((fd = open(RS422_PATH, O_RDWR, 0777)) < 0) {
         printf("failed open device=%s\n", RS422_PATH);
         uassert_true(false);
-        return 0;
+        return ;
     }
     else {
         set_opt(fd, 115200, 8, 'N', 1);
@@ -152,12 +152,13 @@ static void rs422_tc_test(struct utest_tc_export *tc)
     write(fd, test_str, strlen(test_str));
     nByte = read(fd, bufferR, sizeof(bufferR) - 1);
     if((nByte > 0) && (strncmp(bufferW,test_str,strlen(test_str)) == 0)) {
-        uassert_true(true);
+        status = true;
+        return ;
     }
     
     close(fd);
 
-    uassert_true(false);
+    uassert_true(status);
 }
 
 int rs422_tc_exit(struct utest_tc_export *tc)

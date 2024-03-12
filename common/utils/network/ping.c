@@ -395,8 +395,8 @@ int32_t ping_intf(const int8_t *daddr, const char* intf, uint16_t id, int32_t ti
         LOG_ERROR("ping: setsockopt: IP_HDRINCL failed on id %d\n",id);
         goto error_;
     }  
-
-    int rc = setsockopt(sockfd, SOL_SOCKET, SO_BINDTODEVICE, &interface_index, sizeof(interface_index));
+    int rc = setsockopt(sockfd, SOL_SOCKET, SO_BINDTODEVICE, intf, strlen(intf) + 1);
+    // int rc = setsockopt(sockfd, SOL_SOCKET, SO_BINDTODEVICE, &interface_index, sizeof(interface_index));
     if (rc < 0) {
         perror("setsockopt failed");
         close(sockfd);

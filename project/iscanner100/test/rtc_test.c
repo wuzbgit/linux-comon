@@ -17,21 +17,51 @@
 #define RTC_TIME_MIN     00
 #define RTC_TIME_SEC     00
 
-#define RTC_DEV_PATH    "dev/rtc"
+#define RTC_DEV_PATH    "/dev/rtc"
+
+int SetSystemTime(int year,int month,int day,int hour,int minute,int second)
+{
+    struct tm tm;
+    struct timeval tv;
+    time_t timep;
+    tm.tm_year = year - 1900;
+    tm.tm_mon = month - 1;
+    tm.tm_mday = day;
+    tm.tm_hour = hour;
+    tm.tm_min = minute;
+    tm.tm_sec = second;
+
+    timep = mktime(&tm);
+    tv.tv_sec = timep;
+    tv.tv_usec = 0;
+
+    if (settimeofday(&tv, (struct timezone *)0) < 0) {
+        printf("Set system date-time error!\r\n");
+        perror("settimeofday");
+        return -1;
+    }
+
+    return 0;
+}
+
+static int sys_to_rtc()
+{
+    return system("hwclock --systohc");
+}
 
 static int rtc_write(int year,int month,int day,int hour,int minute,int second)
 {
     int fd, retval;
     struct rtc_time rtc_tm;
 
-    fd = open(RTC_DEV_PATH, O_RDONLY);
+    fd = open(RTC_DEV_PATH, O_RDWR);
     if (fd == -1) {
         fprintf(stderr, "open /dev/rtc error\n");
         return -1;
     }
-
-    rtc_tm.tm_mday = year;
-    rtc_tm.tm_mon = month;
+    memset(&rtc_tm, 0 ,sizeof(rtc_tm));
+    rtc_tm.tm_mday = year - 1900;
+    rtc_tm.tm_mon = month - 1;
     rtc_tm.tm_mday = day;
     rtc_tm.tm_hour = hour;
     rtc_tm.tm_min = minute;
@@ -55,7 +85,7 @@ static int rtc_read(int *year,int *month,int *day,int *hour,int *minute,int *sec
 
     fd = open(RTC_DEV_PATH, O_RDONLY);
     if (fd == -1) {
-        fprintf(stderr, "open /dev/rtc error\n");
+        fprintf(stderr, "open %s error\n", RTC_DEV_PATH);
         return -1;
     }
 
@@ -65,8 +95,8 @@ static int rtc_read(int *year,int *month,int *day,int *hour,int *minute,int *sec
         return -1;
     }
 
-    *year = rtc_tm.tm_mday;
-    *month = rtc_tm.tm_mon;
+    *year = rtc_tm.tm_year + 1900;
+    *month = rtc_tm.tm_mon + 1;
     *day = rtc_tm.tm_mday;
     *hour = rtc_tm.tm_hour;
     *minute = rtc_tm.tm_min;
@@ -85,13 +115,23 @@ static int rtc_tc_init(struct utest_tc_export *tc)
     return 0;
 }
 
+static void rtc_tc_read(struct utest_tc_export *tc)
+{
+    int year = 0,mon = 0,day = 0,hour = 0,min = 0,sec = 0;
+    if (rtc_read(&year,&mon,&day,&hour,&min,&sec) == 0) {
+        printf("%4d-%02d-%02d %02d:%02d:%02d\n",year,mon,day,hour,min,sec);
+        uassert_true(true);
+    }
+    else
+        uassert_true(false);
+}
 static void rtc_tc_test(struct utest_tc_export *tc)
 {
     int year = 0,mon = 0,day = 0,hour = 0,min = 0,sec = 0;
     int compare = 0;
     bool status = false;
 
-    if (access("/data/rtc_test",F_OK) == 0) {
+    if (access("/opt/test/rtc_flag",F_OK) == 0) {
         if (access("/tmp/rtc_test",F_OK)) {
             compare = 1;
             if (rtc_read(&year,&mon,&day,&hour,&min,&sec) == 0) {
@@ -102,15 +142,16 @@ static void rtc_tc_test(struct utest_tc_export *tc)
         }
     }
     else {
-        if (rtc_write(RTC_TIME_YEAR,RTC_TIME_MON,RTC_TIME_DAY,RTC_TIME_HOUR,RTC_TIME_MIN,RTC_TIME_SEC) != 0) {
+        if (SetSystemTime(RTC_TIME_YEAR,RTC_TIME_MON,RTC_TIME_DAY,RTC_TIME_HOUR,RTC_TIME_MIN,RTC_TIME_SEC) != 0) {
             uassert_true(false);
         }
         else {
-            system("echo \"rtc\" > /data/rtc_test");
+            system("hwclock --systohc");
+            system("echo \"rtc\" > /opt/test/rtc_flag");
             system("echo \"rtc\" > /tmp/rtc_test");
         }
     }
-    
+    printf("%s,%d:compare=%d\n",__func__,__LINE__,compare);
     if (compare == 0) {
         printf("rtc test case need reset power\n");
     }
@@ -137,7 +178,17 @@ static struct utest_tc_export g_rtc_test[] = {
         .init       = rtc_tc_init,
         .tc         = rtc_tc_test,
         .cleanup    = rtc_tc_exit
-    }
+    },
+    {
+        .module = "rtc",
+        .name = "read",
+        .run_timeout = 5000,
+        .process_fork = false,
+        .fork_assert = NULL,
+        .init       = rtc_tc_init,
+        .tc         = rtc_tc_read,
+        .cleanup    = rtc_tc_exit
+    }    
 };
 extern void display_common_usage();
 static void display_usage()

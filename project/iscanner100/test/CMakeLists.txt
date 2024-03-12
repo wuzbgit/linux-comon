@@ -1,4 +1,4 @@
-set(TARGET_NAME "elec_test")
+set(TARGET_NAME "test")
 set(PROCJET_VERSION 1.0.0)
 
 set(UNITTEST_LIB
