@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/opt/Project/linux-com/project/iot-gw/test/rs485_test.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+fcntl.h
+-
+getopt.h
+-
+sys/ioctl.h
+-
+errno.h
+-
+termios.h
+-
+linux/serial.h
+-
+

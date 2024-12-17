@@ -62,11 +62,19 @@ typedef struct __RFINFO {
 	int rfnetConnectUtctime;
 } RFINFO_T;
 
-int poweron_rf();
+typedef struct __RFMODINFO {
+    char Manufacture[16];
+    char PLMN[16];
+    char Model[16];
+    char Rev[32];
+    char SN[16];
+}__RFMODINFO;
 
-int poweroff_rf();
+int poweron_rf(int gpio, int level);
 
-int N1_RF_hwreset();
+int poweroff_rf(int gpio, int level);
+
+int N1_RF_hwreset(int gpio, int on_level);
 
 void print_RF_status(RFINFO_T* pstrfinfo_);
 

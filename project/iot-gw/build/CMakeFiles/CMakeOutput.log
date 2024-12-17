@@ -1,0 +1,442 @@
+The target system is: Linux -  - 
+The host system is: Linux - 5.15.0-125-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/3.16.3/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/3.16.3/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_86b4d/fast && /usr/bin/make -f CMakeFiles/cmTC_86b4d.dir/build.make CMakeFiles/cmTC_86b4d.dir/build
+make[1]: Entering directory '/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_86b4d.dir/testCCompiler.c.o
+/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-gcc --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot    -o CMakeFiles/cmTC_86b4d.dir/testCCompiler.c.o   -c /opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_86b4d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86b4d.dir/link.txt --verbose=1
+/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-gcc --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot      -rdynamic CMakeFiles/cmTC_86b4d.dir/testCCompiler.c.o  -o cmTC_86b4d 
+make[1]: Leaving directory '/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp'
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d31fa/fast && /usr/bin/make -f CMakeFiles/cmTC_d31fa.dir/build.make CMakeFiles/cmTC_d31fa.dir/build
+make[1]: Entering directory '/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o
+/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-gcc --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot   -v -o CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-gcc.br_real
+Target: arm-buildroot-linux-gnueabihf
+Configured with: ./configure --prefix=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --sysconfdir=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/etc --enable-static --target=arm-buildroot-linux-gnueabihf --with-sysroot=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpc=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpfr=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-pkgversion='Buildroot -g4382e552-dirty' --with-bugurl=http://bugs.buildroot.net/ --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=aapcs-linux --with-cpu=cortex-a7 --with-fpu=vfpv4-d16 --with-float=hard --with-mode=arm --enable-languages=c,c++ --with-build-time-tools=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/bin --enable-shared --disable-libgomp
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.3.0 (Buildroot -g4382e552-dirty) 
+COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_d31fa.dir/'
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/cc1 -quiet -v -iprefix /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/ -isysroot /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d31fa.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=vfpv4-d16 -mabi=aapcs-linux -mtls-dialect=gnu -marm -mlibarch=armv7ve+fp -march=armv7ve+fp -version -fstack-protector -fPIE -o /tmp/ccf4jQuo.s
+GNU C17 (Buildroot -g4382e552-dirty) version 11.3.0 (arm-buildroot-linux-gnueabihf)
+	compiled by GNU C version 9.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include"
+ignoring nonexistent directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/local/include"
+ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed"
+ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include
+End of search list.
+GNU C17 (Buildroot -g4382e552-dirty) version 11.3.0 (arm-buildroot-linux-gnueabihf)
+	compiled by GNU C version 9.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: a6540756d7f64190582bea65bcd0d8f9
+COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_d31fa.dir/'
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=vfpv4-d16 -meabi=5 -o CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o /tmp/ccf4jQuo.s
+GNU assembler version 2.38 (arm-buildroot-linux-gnueabihf) using BFD version (GNU Binutils) 2.38
+COMPILER_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/
+LIBRARY_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.'
+Linking C executable cmTC_d31fa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d31fa.dir/link.txt --verbose=1
+/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-gcc --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot     -v -rdynamic CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o  -o cmTC_d31fa 
+Using built-in specs.
+COLLECT_GCC=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-gcc.br_real
+COLLECT_LTO_WRAPPER=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/lto-wrapper
+Target: arm-buildroot-linux-gnueabihf
+Configured with: ./configure --prefix=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --sysconfdir=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/etc --enable-static --target=arm-buildroot-linux-gnueabihf --with-sysroot=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpc=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpfr=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-pkgversion='Buildroot -g4382e552-dirty' --with-bugurl=http://bugs.buildroot.net/ --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=aapcs-linux --with-cpu=cortex-a7 --with-fpu=vfpv4-d16 --with-float=hard --with-mode=arm --enable-languages=c,c++ --with-build-time-tools=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/bin --enable-shared --disable-libgomp
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.3.0 (Buildroot -g4382e552-dirty) 
+COMPILER_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/
+LIBRARY_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-rdynamic' '-o' 'cmTC_d31fa' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'cmTC_d31fa.'
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/collect2 -plugin /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/liblto_plugin.so -plugin-opt=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0T1SSP.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -pie -o cmTC_d31fa /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/Scrt1.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtbeginS.o -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0 -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib -z now -z relro CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtendS.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o
+COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-rdynamic' '-o' 'cmTC_d31fa' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'cmTC_d31fa.'
+make[1]: Leaving directory '/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include]
+    add: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed]
+    add: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include]
+    add: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include]
+  collapse include dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed]
+  collapse include dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/include]
+  collapse include dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
+  implicit include dirs: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/include;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-buildroot-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_d31fa/fast && /usr/bin/make -f CMakeFiles/cmTC_d31fa.dir/build.make CMakeFiles/cmTC_d31fa.dir/build]
+  ignore line: [make[1]: Entering directory '/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-gcc --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot   -v -o CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-gcc.br_real]
+  ignore line: [Target: arm-buildroot-linux-gnueabihf]
+  ignore line: [Configured with: ./configure --prefix=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --sysconfdir=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/etc --enable-static --target=arm-buildroot-linux-gnueabihf --with-sysroot=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpc=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpfr=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-pkgversion='Buildroot -g4382e552-dirty' --with-bugurl=http://bugs.buildroot.net/ --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=aapcs-linux --with-cpu=cortex-a7 --with-fpu=vfpv4-d16 --with-float=hard --with-mode=arm --enable-languages=c,c++ --with-build-time-tools=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/bin --enable-shared --disable-libgomp]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 11.3.0 (Buildroot -g4382e552-dirty) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_d31fa.dir/']
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/cc1 -quiet -v -iprefix /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/ -isysroot /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d31fa.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=vfpv4-d16 -mabi=aapcs-linux -mtls-dialect=gnu -marm -mlibarch=armv7ve+fp -march=armv7ve+fp -version -fstack-protector -fPIE -o /tmp/ccf4jQuo.s]
+  ignore line: [GNU C17 (Buildroot -g4382e552-dirty) version 11.3.0 (arm-buildroot-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include"]
+  ignore line: [ignoring nonexistent directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include]
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed]
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include]
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (Buildroot -g4382e552-dirty) version 11.3.0 (arm-buildroot-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: a6540756d7f64190582bea65bcd0d8f9]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_d31fa.dir/']
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=vfpv4-d16 -meabi=5 -o CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o /tmp/ccf4jQuo.s]
+  ignore line: [GNU assembler version 2.38 (arm-buildroot-linux-gnueabihf) using BFD version (GNU Binutils) 2.38]
+  ignore line: [COMPILER_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o' '-c' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.']
+  ignore line: [Linking C executable cmTC_d31fa]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d31fa.dir/link.txt --verbose=1]
+  ignore line: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-gcc --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot     -v -rdynamic CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o  -o cmTC_d31fa ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-gcc.br_real]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/lto-wrapper]
+  ignore line: [Target: arm-buildroot-linux-gnueabihf]
+  ignore line: [Configured with: ./configure --prefix=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --sysconfdir=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/etc --enable-static --target=arm-buildroot-linux-gnueabihf --with-sysroot=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpc=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpfr=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-pkgversion='Buildroot -g4382e552-dirty' --with-bugurl=http://bugs.buildroot.net/ --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=aapcs-linux --with-cpu=cortex-a7 --with-fpu=vfpv4-d16 --with-float=hard --with-mode=arm --enable-languages=c,c++ --with-build-time-tools=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/bin --enable-shared --disable-libgomp]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 11.3.0 (Buildroot -g4382e552-dirty) ]
+  ignore line: [COMPILER_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-rdynamic' '-o' 'cmTC_d31fa' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'cmTC_d31fa.']
+  link line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/collect2 -plugin /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/liblto_plugin.so -plugin-opt=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0T1SSP.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -pie -o cmTC_d31fa /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/Scrt1.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtbeginS.o -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0 -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib -z now -z relro CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtendS.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o]
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc0T1SSP.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_d31fa] ==> ignore
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/Scrt1.o] ==> ignore
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o] ==> ignore
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtbeginS.o] ==> ignore
+    arg [-L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0] ==> dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0]
+    arg [-L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc] ==> dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc]
+    arg [-L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib] ==> dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib]
+    arg [-L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib]
+    arg [-L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [CMakeFiles/cmTC_d31fa.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtendS.o] ==> ignore
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o] ==> ignore
+  collapse library dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0]
+  collapse library dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc]
+  collapse library dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/lib]
+  collapse library dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib]
+  collapse library dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/lib;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e6018/fast && /usr/bin/make -f CMakeFiles/cmTC_e6018.dir/build.make CMakeFiles/cmTC_e6018.dir/build
+make[1]: Entering directory '/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e6018.dir/testCXXCompiler.cxx.o
+/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-g++ --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot     -o CMakeFiles/cmTC_e6018.dir/testCXXCompiler.cxx.o -c /opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_e6018
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6018.dir/link.txt --verbose=1
+/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-g++ --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot       -rdynamic CMakeFiles/cmTC_e6018.dir/testCXXCompiler.cxx.o  -o cmTC_e6018 
+make[1]: Leaving directory '/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp'
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_059b0/fast && /usr/bin/make -f CMakeFiles/cmTC_059b0.dir/build.make CMakeFiles/cmTC_059b0.dir/build
+make[1]: Entering directory '/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o
+/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-g++ --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot    -v -o CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-g++.br_real
+Target: arm-buildroot-linux-gnueabihf
+Configured with: ./configure --prefix=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --sysconfdir=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/etc --enable-static --target=arm-buildroot-linux-gnueabihf --with-sysroot=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpc=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpfr=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-pkgversion='Buildroot -g4382e552-dirty' --with-bugurl=http://bugs.buildroot.net/ --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=aapcs-linux --with-cpu=cortex-a7 --with-fpu=vfpv4-d16 --with-float=hard --with-mode=arm --enable-languages=c,c++ --with-build-time-tools=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/bin --enable-shared --disable-libgomp
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.3.0 (Buildroot -g4382e552-dirty) 
+COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_059b0.dir/'
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/cc1plus -quiet -v -iprefix /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/ -isysroot /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_059b0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=vfpv4-d16 -mabi=aapcs-linux -mtls-dialect=gnu -marm -mlibarch=armv7ve+fp -march=armv7ve+fp -version -fstack-protector -fPIE -o /tmp/ccZvSOQX.s
+GNU C++17 (Buildroot -g4382e552-dirty) version 11.3.0 (arm-buildroot-linux-gnueabihf)
+	compiled by GNU C version 9.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0"
+ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/arm-buildroot-linux-gnueabihf"
+ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/backward"
+ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include"
+ignoring nonexistent directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/local/include"
+ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed"
+ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/arm-buildroot-linux-gnueabihf
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/backward
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include
+End of search list.
+GNU C++17 (Buildroot -g4382e552-dirty) version 11.3.0 (arm-buildroot-linux-gnueabihf)
+	compiled by GNU C version 9.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 636ae88095a2373df35d799580ce464d
+COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_059b0.dir/'
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=vfpv4-d16 -meabi=5 -o CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZvSOQX.s
+GNU assembler version 2.38 (arm-buildroot-linux-gnueabihf) using BFD version (GNU Binutils) 2.38
+COMPILER_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/
+LIBRARY_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.'
+Linking CXX executable cmTC_059b0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_059b0.dir/link.txt --verbose=1
+/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-g++ --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot      -v -rdynamic CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_059b0 
+Using built-in specs.
+COLLECT_GCC=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-g++.br_real
+COLLECT_LTO_WRAPPER=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/lto-wrapper
+Target: arm-buildroot-linux-gnueabihf
+Configured with: ./configure --prefix=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --sysconfdir=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/etc --enable-static --target=arm-buildroot-linux-gnueabihf --with-sysroot=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpc=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpfr=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-pkgversion='Buildroot -g4382e552-dirty' --with-bugurl=http://bugs.buildroot.net/ --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=aapcs-linux --with-cpu=cortex-a7 --with-fpu=vfpv4-d16 --with-float=hard --with-mode=arm --enable-languages=c,c++ --with-build-time-tools=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/bin --enable-shared --disable-libgomp
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.3.0 (Buildroot -g4382e552-dirty) 
+COMPILER_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/
+LIBRARY_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-rdynamic' '-o' 'cmTC_059b0' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'cmTC_059b0.'
+ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/collect2 -plugin /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/liblto_plugin.so -plugin-opt=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cco1tPir.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -pie -o cmTC_059b0 /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/Scrt1.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtbeginS.o -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0 -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib -z now -z relro CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtendS.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o
+COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-rdynamic' '-o' 'cmTC_059b0' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'cmTC_059b0.'
+make[1]: Leaving directory '/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0]
+    add: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/arm-buildroot-linux-gnueabihf]
+    add: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/backward]
+    add: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include]
+    add: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed]
+    add: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include]
+    add: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/include/c++/11.3.0]
+  collapse include dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/arm-buildroot-linux-gnueabihf] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/include/c++/11.3.0/arm-buildroot-linux-gnueabihf]
+  collapse include dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/backward] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/include/c++/11.3.0/backward]
+  collapse include dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include]
+  collapse include dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed]
+  collapse include dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/include]
+  collapse include dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
+  implicit include dirs: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/include/c++/11.3.0;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/include/c++/11.3.0/arm-buildroot-linux-gnueabihf;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/include/c++/11.3.0/backward;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/include;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-buildroot-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_059b0/fast && /usr/bin/make -f CMakeFiles/cmTC_059b0.dir/build.make CMakeFiles/cmTC_059b0.dir/build]
+  ignore line: [make[1]: Entering directory '/opt/Project/linux-com/project/iot-gw/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-g++ --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot    -v -o CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-g++.br_real]
+  ignore line: [Target: arm-buildroot-linux-gnueabihf]
+  ignore line: [Configured with: ./configure --prefix=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --sysconfdir=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/etc --enable-static --target=arm-buildroot-linux-gnueabihf --with-sysroot=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpc=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpfr=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-pkgversion='Buildroot -g4382e552-dirty' --with-bugurl=http://bugs.buildroot.net/ --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=aapcs-linux --with-cpu=cortex-a7 --with-fpu=vfpv4-d16 --with-float=hard --with-mode=arm --enable-languages=c,c++ --with-build-time-tools=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/bin --enable-shared --disable-libgomp]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 11.3.0 (Buildroot -g4382e552-dirty) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_059b0.dir/']
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/cc1plus -quiet -v -iprefix /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/ -isysroot /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_059b0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=vfpv4-d16 -mabi=aapcs-linux -mtls-dialect=gnu -marm -mlibarch=armv7ve+fp -march=armv7ve+fp -version -fstack-protector -fPIE -o /tmp/ccZvSOQX.s]
+  ignore line: [GNU C++17 (Buildroot -g4382e552-dirty) version 11.3.0 (arm-buildroot-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0"]
+  ignore line: [ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/arm-buildroot-linux-gnueabihf"]
+  ignore line: [ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/backward"]
+  ignore line: [ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include"]
+  ignore line: [ignoring nonexistent directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/../../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0]
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/arm-buildroot-linux-gnueabihf]
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include/c++/11.3.0/backward]
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include]
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/include-fixed]
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/include]
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++17 (Buildroot -g4382e552-dirty) version 11.3.0 (arm-buildroot-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 636ae88095a2373df35d799580ce464d]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_059b0.dir/']
+  ignore line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/as -v -march=armv7ve -mfloat-abi=hard -mfpu=vfpv4-d16 -meabi=5 -o CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZvSOQX.s]
+  ignore line: [GNU assembler version 2.38 (arm-buildroot-linux-gnueabihf) using BFD version (GNU Binutils) 2.38]
+  ignore line: [COMPILER_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-o' 'CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [Linking CXX executable cmTC_059b0]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_059b0.dir/link.txt --verbose=1]
+  ignore line: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin//arm-buildroot-linux-gnueabihf-g++ --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot      -v -rdynamic CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_059b0 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-g++.br_real]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/lto-wrapper]
+  ignore line: [Target: arm-buildroot-linux-gnueabihf]
+  ignore line: [Configured with: ./configure --prefix=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --sysconfdir=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/etc --enable-static --target=arm-buildroot-linux-gnueabihf --with-sysroot=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpc=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-mpfr=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host --with-pkgversion='Buildroot -g4382e552-dirty' --with-bugurl=http://bugs.buildroot.net/ --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=aapcs-linux --with-cpu=cortex-a7 --with-fpu=vfpv4-d16 --with-float=hard --with-mode=arm --enable-languages=c,c++ --with-build-time-tools=/opt/Project/iot/t113_i/T113-i_v1.0/out/t113_i/boc-iotgw/longan/buildroot/host/arm-buildroot-linux-gnueabihf/bin --enable-shared --disable-libgomp]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 11.3.0 (Buildroot -g4382e552-dirty) ]
+  ignore line: [COMPILER_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/:/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fstack-protector' '-fPIE' '-pie' '-v' '-rdynamic' '-o' 'cmTC_059b0' '-shared-libgcc' '-mcpu=cortex-a7' '-mfloat-abi=hard' '-mfpu=vfpv4-d16' '-mabi=aapcs-linux' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7ve+fp' '-march=armv7ve+fp' '-dumpdir' 'cmTC_059b0.']
+  link line: [ /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/collect2 -plugin /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/liblto_plugin.so -plugin-opt=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cco1tPir.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -pie -o cmTC_059b0 /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/Scrt1.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtbeginS.o -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0 -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib -L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib -z now -z relro CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtendS.o /opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o]
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../libexec/gcc/arm-buildroot-linux-gnueabihf/11.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cco1tPir.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_059b0] ==> ignore
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/Scrt1.o] ==> ignore
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o] ==> ignore
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtbeginS.o] ==> ignore
+    arg [-L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0] ==> dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0]
+    arg [-L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc] ==> dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc]
+    arg [-L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib] ==> dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib]
+    arg [-L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib]
+    arg [-L/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [CMakeFiles/cmTC_059b0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/crtendS.o] ==> ignore
+    arg [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o] ==> ignore
+  collapse library dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0]
+  collapse library dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc]
+  collapse library dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0/../../../../arm-buildroot-linux-gnueabihf/lib] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/lib]
+  collapse library dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib]
+  collapse library dir [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc/arm-buildroot-linux-gnueabihf/11.3.0;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/lib/gcc;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/lib;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/lib;/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit fwks: []
+
+

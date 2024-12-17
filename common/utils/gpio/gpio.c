@@ -247,7 +247,7 @@ int gpio_set_level(int number, int level)
 }
 
 
-int gpio_get_level(int number, char *level)
+int gpio_get_level(int number, int *level)
 {
     int ret = 0;
     int  fd;
@@ -267,6 +267,12 @@ int gpio_get_level(int number, char *level)
         return -1;
     }
 
+    if (*level == '0') {
+        *level = 0;
+    }
+    else {
+        *level = 1;
+    }
     close(fd);
-    return ret;
+    return 0;
 }

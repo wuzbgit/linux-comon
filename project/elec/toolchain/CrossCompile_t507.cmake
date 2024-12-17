@@ -1,5 +1,5 @@
 set(CMAKE_SYSTEM_NAME Linux)
 set(TOOLCHAIN_PATH /opt/toolchain/t507/aarch64-buildroot-linux-gnu_sdk-buildroot/bin/)
-set(CMAKE_C_COMPILER ${TOOLCHAIN_PATH}/aarch64-linux-gnu-gcc)
-set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PATH}/aarch64-linux-gnu-g++)
+set(CMAKE_C_COMPILER ${TOOLCHAIN_PATH}/aarch64-buildroot-linux-gnu-gcc)
+set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PATH}/aarch64-buildroot-linux-gnu-g++)
 set(CMAKE_SYSROOT /opt/toolchain/t507/aarch64-buildroot-linux-gnu_sdk-buildroot/aarch64-buildroot-linux-gnu/sysroot)

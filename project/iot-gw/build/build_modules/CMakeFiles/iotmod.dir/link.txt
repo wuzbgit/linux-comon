@@ -1,0 +1,2 @@
+/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-ar qc ../../out/archive/libiotmod.a  CMakeFiles/iotmod.dir/src/ai.c.o CMakeFiles/iotmod.dir/src/di.c.o CMakeFiles/iotmod.dir/src/do.c.o CMakeFiles/iotmod.dir/src/led.c.o CMakeFiles/iotmod.dir/src/rf.c.o CMakeFiles/iotmod.dir/src/rs485.c.o CMakeFiles/iotmod.dir/src/rtc.c.o
+/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-ranlib ../../out/archive/libiotmod.a

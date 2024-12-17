@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../../common/utils/network/netip.h
+types.h
+../../../common/utils/network/types.h
+
+../../../common/utils/network/ping.h
+types.h
+../../../common/utils/network/types.h
+
+../../../common/utils/types.h
+stdbool.h
+-
+stdint.h
+-
+
+/opt/Project/linux-com/project/iot-gw/test/eth_test.c
+stdio.h
+-
+unistd.h
+-
+string.h
+-
+stdlib.h
+-
+getopt.h
+-
+errno.h
+-
+network/netip.h
+/opt/Project/linux-com/project/iot-gw/test/network/netip.h
+network/ping.h
+/opt/Project/linux-com/project/iot-gw/test/network/ping.h
+

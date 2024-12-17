@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/opt/Project/linux-com/project/iot-gw/app/board_srv.c
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+string.h
+-
+sys/mount.h
+-
+unistd.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+sys/vfs.h
+-
+

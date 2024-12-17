@@ -18,6 +18,8 @@ static int test_mode = 0;
 #define RF_MODLE        "EC20F"
 #define SIM_STATE       "Inserted"
 #define SIM_TYPE        "dianxin"
+#define RF_RESET_GPIO       99
+#define RF_POWERON_LEVEL     1
 
 static int rf_module_tc_init(struct utest_tc_export *tc)
 {
@@ -94,7 +96,7 @@ static int rf_reset_tc_init(struct utest_tc_export *tc)
     if (access("/var/lock/LCK..ttyUSB3",F_OK) == 0) {
         system("rm /var/lock/LCK..ttyUSB3");
     } 
-    N1_RF_hwreset();
+    N1_RF_hwreset(RF_RESET_GPIO,RF_POWERON_LEVEL);
     do {
         ret = rf_exist();
         if (ret == 1) {
@@ -116,7 +118,7 @@ static void rf_reset_tc_test(struct utest_tc_export *tc)
     int ret;
     unsigned i=0,max_cnt = 10;
 
-    poweroff_rf();
+    poweroff_rf(RF_RESET_GPIO,!RF_POWERON_LEVEL);
     i = 0;
     do {
         ret = rf_exist();
@@ -132,7 +134,7 @@ static void rf_reset_tc_test(struct utest_tc_export *tc)
         return ;
     }
 
-    poweron_rf();
+    poweron_rf(RF_RESET_GPIO,RF_POWERON_LEVEL);
     max_cnt = 30;
     i = 0;
     do {
@@ -194,7 +196,7 @@ static int rf_net_tc_init(struct utest_tc_export *tc)
         return 0;
     }
 
-    poweron_rf();
+    poweron_rf(RF_RESET_GPIO,RF_POWERON_LEVEL);
     do {
         ret = rf_exist();
         if (ret == 1) {

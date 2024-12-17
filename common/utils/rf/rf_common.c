@@ -18,109 +18,98 @@
 
 static pthread_mutex_t g_rf_mutex = PTHREAD_MUTEX_INITIALIZER;
 
-static int init_rf_gpio()
+static int init_rf_gpio(int gpio)
 {
-#if (TARGET_BOARD == t507)
-	return 0;
-#else
-    int ret = -1;
-    char gpio23[64] = "/sys/class/gpio/gpio23";
+	int ret = -1;
+	char gpio_reset[64] = {0};
     struct stat sbuf;
-    if(0 == stat(gpio23, &sbuf))
+	snprintf(gpio_reset,"/sys/class/gpio/gpio%d",gpio);
+    if(0 == stat(gpio_reset, &sbuf))
 		return ret = 0;
     
-    ret = gpio_export(GPIO_RF_RESET);
+    ret = gpio_export(gpio);
     if(0 != ret) {
         LOG_ERROR("rf_main: export gpio RF_RESET failed");
     }
     else
     {
-        ret = gpio_set_direction(GPIO_RF_RESET, GPIO_DIR_OUT);
+        ret = gpio_set_direction(gpio, GPIO_DIR_OUT);
         if(0 != ret)
 		{
             LOG_ERROR("rf_main: direction gpio RF_RESET failed");
 		}
     }
     return ret;
-#endif
 }
 
-
-static int reset_rf()
+int poweron_rf(int gpio, int level)
 {
-#if (TARGET_BOARD == t507)
-	int ret;
-	ret = system("gpio -s PE1 1 1 0 0 > /dev/null");
-	if (ret != 0) {
-		return -1;
-	}
-
-	sleep(2);
-
-	system("gpio -s PE1 1 0 0 0 > /dev/null");
-#else
-	int ret = -1;
-	unsigned gpio_on = 0;
-
-    if(0 != gpio_set_level(GPIO_RF_RESET, !gpio_on))
-    {
-	 	LOG_ERROR("rf_main: failed to set gpio RF_RESET low")
-	 	return ret;
-    }
-    
-    sleep(2);
-    
-    if(0 != gpio_set_level(GPIO_RF_RESET, gpio_on))
-    {
-	 	LOG_ERROR("rf_main: failed to set gpio RF_RESET high")
-	 	return ret;
-    }
-#endif
-    return 0;
-}
-
-int poweron_rf()
-{
-#if (TARGET_BOARD == t507)
-	if (system("gpio -s PE1 1 0 0 0 > /dev/null")) {
-		return -1;
-	}
-#else
-	unsigned gpio_on = 1;
-	
-    if( 0 == init_rf_gpio())
-    {
-   		if(0 != gpio_set_level(GPIO_RF_RESET, gpio_on))
-    	{
-	 		LOG_ERROR("rf_main: failed to set gpio RF_RESET high\n");
-	 		return -1;
-    	}
-	}
-#endif
-	return 0;
-
-}
-
-int poweroff_rf()
-{
-#if (TARGET_BOARD == t507)
+#ifdef PROJECT_ELEC
 	if (system("gpio -s PE1 1 1 0 0 > /dev/null")) {
 		return -1;
 	}
-#else
-	unsigned gpio_on = 1;
+#endif
+
+#ifdef PROJECT_IOT_GATEWAY
+	if (system("gpio -s PG13 1 1 0 0 > /dev/null")) {
+		return -1;
+	}
+#endif
+
+#ifdef PROJECT_ISCANNER
+	unsigned gpio_on = level;
+	
+    if( 0 == init_rf_gpio(gpio)) {
+   		if(0 != gpio_set_level(gpio, gpio_on)) {
+	 		LOG_ERROR("rf_main: failed to set gpio RF_RESET high\n");
+	 		return -1;
+    	}
+	}
+#endif
+
+	return 0;
+}
+
+int poweroff_rf(int gpio, int level)
+{
+#ifdef PROJECT_IOT_GATEWAY
+	if (system("gpio -s PG13 1 0 0 0 > /dev/null")) {
+		return -1;
+	}
+#endif
+
+#ifdef PROJECT_ELEC
+	if (system("gpio -s PG13 1 0 0 0 > /dev/null")) {
+		return -1;
+	}
+#endif
+
+#ifdef PROJECT_ISCANNER
+
+	unsigned gpio_off = level;
 	
     if( 0 == init_rf_gpio())
     {
-   		if(0 != gpio_set_level(GPIO_RF_RESET, gpio_on))
+   		if(0 != gpio_set_level(gpio, gpio_off))
     	{
 	 		LOG_ERROR("rf_main: failed to set gpio RF_RESET high\n");
 	 		return -1;
     	}
 	}
 #endif
-	return 0;
 
+	return 0;
+}
+
+static int reset_rf(int gpio,int on_level)
+{
+	poweroff_rf(gpio, !on_level);
+
+	sleep(2);
+
+	poweron_rf(gpio, on_level);
+
+    return 0;
 }
 
 int get_RF_moduleInfo(const char* rfdev_, RFINFO_T* pstrfinfo_, int rf_mnf_)
@@ -233,7 +222,7 @@ int update_RF_signalInfo(const char* rfdev_, RFINFO_T* pstrfinfo_, int rf_mnf_)
 int update_RF_status(const char* rfdev_, RFINFO_T* pstrfinfo_, int rf_mnf_)
 {
     int ret  = -1;
-    printf("%s,%d\r\n",__func__,__LINE__);
+
     if(NULL == pstrfinfo_)
 		return ret;
     LOG_INFO("%s,%d\n",__func__,__LINE__);
@@ -298,6 +287,23 @@ int rf_get_cfun(char* rfdev_, const int rf_manufacture_,int *cfun)
 		
 }
 
+int rf_sim_detect(char *rfdev_,const int rf_manufacture_, bool enable, int level)
+{
+	int ret = -1;
+	pthread_mutex_lock(&g_rf_mutex);
+    if(rf_manufacture_ == RF_QUECTEL)
+    {
+		ret = SimDetect_enable_QUECTEL(rfdev_,enable, level);
+		if(ret!=0)
+		{
+			LOG_ERROR("ERROR: %s sim card detect err\r\n",enable==true ? "enable" : "disable");
+		}
+    }
+
+	pthread_mutex_unlock(&g_rf_mutex);
+
+	return ret;	
+}
 int rf_get_cpin(char* rfdev_, const int rf_manufacture_,int *cpin)
 {
 	int ret = -1;
@@ -431,13 +437,11 @@ int rf_at_cmd(char* rfdev_,char *cmd)
 	
 	pthread_mutex_lock(&g_rf_mutex); 
 	
-	if(0 != parse_RFinfo_request(rfdev_, at_cmd, response, sizeof(response) - 1))
-	{
+	if(0 != parse_RFinfo_request(rfdev_, at_cmd, response, sizeof(response) - 1)) {
 		printf("ERROR: rf can not  use AT cmd:%s\n",cmd);
 		ret = -1;
 	}	
-	else
-	{
+	else {
 		printf("cmd:%s response:%s\n",cmd,response);
 		ret = 0;
 	}
@@ -651,14 +655,14 @@ cfun_reset_error:
 		return -1;
 }
 
-int N1_RF_hwreset()
+int N1_RF_hwreset(int gpio, int on_level)
 {
     int ret = -1;
     pthread_mutex_lock(&g_rf_mutex);     
-    /* Toggle GPIO0_23 to reset 4G module */
-    if( 0 == init_rf_gpio())
+
+    if( 0 == init_rf_gpio(gpio))
     {
-		if(0 == reset_rf())
+		if(0 == reset_rf(gpio, on_level))
 	   		ret = 0;		
 	}
     pthread_mutex_unlock(&g_rf_mutex);

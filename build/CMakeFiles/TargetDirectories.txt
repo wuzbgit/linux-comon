@@ -1,0 +1,3 @@
+/opt/Project/linux-com/build/CMakeFiles/rebuild_cache.dir
+/opt/Project/linux-com/build/CMakeFiles/edit_cache.dir
+/opt/Project/linux-com/build/CMakeFiles/utils.dir

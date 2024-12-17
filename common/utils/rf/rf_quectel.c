@@ -201,9 +201,9 @@ int get_RF_DeviceInfo_QUECTEL(const char* rfdev_, RFINFO_T* pstrfinfo_)
 		strcpy(pstrfinfo_->SIMStatus,"Unkown");
 	}
 
-	if (!strcmp(pstrfinfo_->SIMStatus,"Inserted")) {
-		ret = get_RF_ICCID_QUECTEL(rfdev_, pstrfinfo_);
-	}
+	// if (!strcmp(pstrfinfo_->SIMStatus,"Inserted")) {
+	// 	ret = get_RF_ICCID_QUECTEL(rfdev_, pstrfinfo_);
+	// }
 	
     return ret;
 }
@@ -722,6 +722,33 @@ int reset_cfun_QUECTEL(char* rfdev_)
     if(NULL == (pos = strstr((const char *)response, (const char *)packageIden)))
     {
 		LOG_ERROR("Error: %s, no OK string in response\n",__func__);
+		return ret;
+    }
+	
+    return ret = 0;
+
+}
+
+int SimDetect_enable_QUECTEL(char* rfdev_,bool enable, int level)
+{
+    int ret  = -1;
+    char response[256] = {0};
+	char packageIden[] = "OK";
+    char* pos;
+	char cmd[64] = {0};
+
+    if(NULL == rfdev_)
+		return ret;
+	sprintf(cmd,"AT+QSIMDET=%d,%d\r\n",enable,level);
+    if(0 != parse_RFinfo_request(rfdev_, cmd, response, sizeof(response)))
+    {
+		LOG_ERROR("ERROR: %s, read AT+QSIMDET failed\n", __func__);
+		return ret;
+    }
+    
+    if(NULL == (pos = strstr((const char *)response, (const char *)packageIden)))
+    {
+		LOG_ERROR("Error: %s, no OK string in response\n", __func__);
 		return ret;
     }
 	

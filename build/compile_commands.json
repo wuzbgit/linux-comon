@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/opt/Project/linux-com/build",
+  "command": "/usr/bin/cc -DPROJECT_ELEC -Dutils_EXPORTS  -fPIC -g -fPIC   -o CMakeFiles/utils.dir/debug/debug.o   -c /opt/Project/linux-com/common/utils/debug/debug.c",
+  "file": "/opt/Project/linux-com/common/utils/debug/debug.c"
+},
+{
+  "directory": "/opt/Project/linux-com/build",
+  "command": "/usr/bin/cc -DPROJECT_ELEC -Dutils_EXPORTS  -fPIC -g -fPIC   -o CMakeFiles/utils.dir/gpio/gpio.o   -c /opt/Project/linux-com/common/utils/gpio/gpio.c",
+  "file": "/opt/Project/linux-com/common/utils/gpio/gpio.c"
+},
+{
+  "directory": "/opt/Project/linux-com/build",
+  "command": "/usr/bin/cc -DPROJECT_ELEC -Dutils_EXPORTS  -fPIC -g -fPIC   -o CMakeFiles/utils.dir/network/netip.o   -c /opt/Project/linux-com/common/utils/network/netip.c",
+  "file": "/opt/Project/linux-com/common/utils/network/netip.c"
+},
+{
+  "directory": "/opt/Project/linux-com/build",
+  "command": "/usr/bin/cc -DPROJECT_ELEC -Dutils_EXPORTS  -fPIC -g -fPIC   -o CMakeFiles/utils.dir/network/ping.o   -c /opt/Project/linux-com/common/utils/network/ping.c",
+  "file": "/opt/Project/linux-com/common/utils/network/ping.c"
+},
+{
+  "directory": "/opt/Project/linux-com/build",
+  "command": "/usr/bin/cc -DPROJECT_ELEC -Dutils_EXPORTS  -fPIC -g -fPIC   -o CMakeFiles/utils.dir/rf/rf_common.o   -c /opt/Project/linux-com/common/utils/rf/rf_common.c",
+  "file": "/opt/Project/linux-com/common/utils/rf/rf_common.c"
+},
+{
+  "directory": "/opt/Project/linux-com/build",
+  "command": "/usr/bin/cc -DPROJECT_ELEC -Dutils_EXPORTS  -fPIC -g -fPIC   -o CMakeFiles/utils.dir/rf/rf_lynq.o   -c /opt/Project/linux-com/common/utils/rf/rf_lynq.c",
+  "file": "/opt/Project/linux-com/common/utils/rf/rf_lynq.c"
+},
+{
+  "directory": "/opt/Project/linux-com/build",
+  "command": "/usr/bin/cc -DPROJECT_ELEC -Dutils_EXPORTS  -fPIC -g -fPIC   -o CMakeFiles/utils.dir/rf/rf_quectel.o   -c /opt/Project/linux-com/common/utils/rf/rf_quectel.c",
+  "file": "/opt/Project/linux-com/common/utils/rf/rf_quectel.c"
+},
+{
+  "directory": "/opt/Project/linux-com/build",
+  "command": "/usr/bin/cc -DPROJECT_ELEC -Dutils_EXPORTS  -fPIC -g -fPIC   -o CMakeFiles/utils.dir/threads/thread.o   -c /opt/Project/linux-com/common/utils/threads/thread.c",
+  "file": "/opt/Project/linux-com/common/utils/threads/thread.c"
+},
+{
+  "directory": "/opt/Project/linux-com/build",
+  "command": "/usr/bin/cc -DPROJECT_ELEC -Dutils_EXPORTS  -fPIC -g -fPIC   -o CMakeFiles/utils.dir/utest/utest.o   -c /opt/Project/linux-com/common/utils/utest/utest.c",
+  "file": "/opt/Project/linux-com/common/utils/utest/utest.c"
+}
+]

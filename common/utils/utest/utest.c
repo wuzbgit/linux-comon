@@ -113,9 +113,9 @@ int do_test(struct utest_tc_export *tc,unsigned loop_count)
 {
     int ret = 0;
     unsigned loop = 0;
+
     do {
         loop++;
-
         if (tc->tc) {
             printf("\n[    RUN    ] [ %s %s ]\n",g_tc->module,g_tc->name);
             tc->tc(tc);

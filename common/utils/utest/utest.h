@@ -59,8 +59,10 @@ typedef struct utest *utest_t;
 struct utest_tc_export {
     const char  *module;
     const char  *name;
+    const char  *help;
     uint32_t     run_timeout;
     int          process_fork;
+    int          special_test;
     void         *priv;
     int   (*init)(struct utest_tc_export *);
     void       (*tc)(struct utest_tc_export *);

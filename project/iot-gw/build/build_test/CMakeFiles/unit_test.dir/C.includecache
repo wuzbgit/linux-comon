@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../../common/utils/rf/rf_common.h
+
+/opt/Project/linux-com/project/iot-gw/test/unit_test.c
+stdio.h
+-
+unistd.h
+-
+string.h
+-
+stdlib.h
+-
+stdbool.h
+-
+errno.h
+-
+fcntl.h
+-
+getopt.h
+-
+pthread.h
+-
+time.h
+-
+rf/rf_common.h
+/opt/Project/linux-com/project/iot-gw/test/rf/rf_common.h
+
