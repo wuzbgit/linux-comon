@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "../../out/rootfs/usr/bin/di_test"
-  "../../out/rootfs/usr/bin/di_test.pdb"
+  "/opt/Project/linux-com/project/iot-gw/out/rootfs/usr/bin/di_test"
+  "/opt/Project/linux-com/project/iot-gw/out/rootfs/usr/bin/di_test.pdb"
   "CMakeFiles/di_test.dir/di_test.c.o"
+  "CMakeFiles/di_test.dir/di_test.c.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

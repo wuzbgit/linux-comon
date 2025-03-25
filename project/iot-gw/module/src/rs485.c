@@ -55,7 +55,23 @@ int rs485_init()
     return 0;
 }
 
-int serial_open(const char *devpath,unsigned timeout)
+speed_t get_baudrate(unsigned int rate)
+{
+    switch(rate) {
+        case 1200:   return B1200;
+        case 2400:   return B2400;
+        case 4800:   return B4800;
+        case 9600:   return B9600;
+        case 19200:  return B19200;
+        case 38400:  return B38400;
+        case 57600:  return B57600;
+        case 115200: return B115200;
+        case 230400: return B230400;
+        default:      return -1;
+    }
+}
+
+int serial_open(const char *devpath,unsigned baudrate,unsigned timeout)
 {
     int serial_port = open(devpath, O_RDWR);  
 
@@ -72,8 +88,8 @@ int serial_open(const char *devpath,unsigned timeout)
         return -1;  
     }  
   
-    cfsetospeed(&tty, PORT_BAUDRATE);  
-    cfsetispeed(&tty, PORT_BAUDRATE);
+    cfsetospeed(&tty, get_baudrate(baudrate));  
+    cfsetispeed(&tty, get_baudrate(baudrate));
 
     tty.c_cflag = (tty.c_cflag & ~CSIZE) | CS8;  
     tty.c_cflag |= (CLOCAL | CREAD);  
@@ -131,7 +147,7 @@ int rs485_echo_test(char *devpath)
     
     rs485_enable(devpath,1);
 
-    fd = serial_open(devpath,10000);
+    fd = serial_open(devpath,115200,10000);
     if (fd < 0) {
         printf("open %s failed\n",devpath);
 
@@ -189,7 +205,7 @@ int rs485_rw_test(char *devpath)
 
     rs485_enable(devpath,1);
 
-    fd = serial_open(devpath,10000);
+    fd = serial_open(devpath,115200,10000);
     if (fd < 0) {
         printf("open %s failed\n",devpath);
 
@@ -226,7 +242,7 @@ int rs422_echo_test(const char *devpath)
     
     rs485_enable(devpath,1);
 
-    fd = serial_open(devpath,10000);
+    fd = serial_open(devpath,115200,10000);
     if (fd < 0) {
         printf("open %s failed\n",devpath);
 
@@ -262,14 +278,14 @@ int rs485_loopback_test(char *dev_src,char *dev_dst)
     rs485_enable(dev_src,1);
     rs485_enable(dev_dst,1);
 
-    fd_src = serial_open(dev_src,10000);
+    fd_src = serial_open(dev_src,115200,10000);
     if (fd_src <= 0) {
         printf("open %s failed\n",dev_src);
 
         return -1;
     }
 
-    fd_dst = serial_open(dev_dst,10000);
+    fd_dst = serial_open(dev_dst,115200,10000);
     if (fd_dst <= 0) {
         printf("open %s failed\n",dev_dst);
 

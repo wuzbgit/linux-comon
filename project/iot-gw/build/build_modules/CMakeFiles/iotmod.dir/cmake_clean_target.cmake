@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "../../out/archive/libiotmod.a"
+  "/opt/Project/linux-com/project/iot-gw/out/archive/libiotmod.a"
 )

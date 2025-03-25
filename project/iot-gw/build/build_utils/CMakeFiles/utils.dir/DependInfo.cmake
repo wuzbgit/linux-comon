@@ -1,37 +1,30 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "/opt/Project/linux-com/common/utils/debug/debug.c" "/opt/Project/linux-com/project/iot-gw/build/build_utils/CMakeFiles/utils.dir/debug/debug.c.o"
-  "/opt/Project/linux-com/common/utils/gpio/gpio.c" "/opt/Project/linux-com/project/iot-gw/build/build_utils/CMakeFiles/utils.dir/gpio/gpio.c.o"
-  "/opt/Project/linux-com/common/utils/network/netip.c" "/opt/Project/linux-com/project/iot-gw/build/build_utils/CMakeFiles/utils.dir/network/netip.c.o"
-  "/opt/Project/linux-com/common/utils/network/ping.c" "/opt/Project/linux-com/project/iot-gw/build/build_utils/CMakeFiles/utils.dir/network/ping.c.o"
-  "/opt/Project/linux-com/common/utils/rf/rf_common.c" "/opt/Project/linux-com/project/iot-gw/build/build_utils/CMakeFiles/utils.dir/rf/rf_common.c.o"
-  "/opt/Project/linux-com/common/utils/rf/rf_lynq.c" "/opt/Project/linux-com/project/iot-gw/build/build_utils/CMakeFiles/utils.dir/rf/rf_lynq.c.o"
-  "/opt/Project/linux-com/common/utils/rf/rf_quectel.c" "/opt/Project/linux-com/project/iot-gw/build/build_utils/CMakeFiles/utils.dir/rf/rf_quectel.c.o"
-  "/opt/Project/linux-com/common/utils/threads/thread.c" "/opt/Project/linux-com/project/iot-gw/build/build_utils/CMakeFiles/utils.dir/threads/thread.c.o"
-  "/opt/Project/linux-com/common/utils/utest/utest.c" "/opt/Project/linux-com/project/iot-gw/build/build_utils/CMakeFiles/utils.dir/utest/utest.c.o"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_C
-  "PROJECT_IOT_GATEWAY"
-  "utils_EXPORTS"
   )
 
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include/base"
-  "/opt/Project/linux-com/project/iot-gw/../../common/utils"
-  "/opt/Project/linux-com/project/iot-gw/../../common/service/include"
-  "/opt/Project/linux-com/project/iot-gw/module/include"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/opt/Project/linux-com/common/utils/debug/debug.c" "build_utils/CMakeFiles/utils.dir/debug/debug.c.o" "gcc" "build_utils/CMakeFiles/utils.dir/debug/debug.c.o.d"
+  "/opt/Project/linux-com/common/utils/gpio/gpio.c" "build_utils/CMakeFiles/utils.dir/gpio/gpio.c.o" "gcc" "build_utils/CMakeFiles/utils.dir/gpio/gpio.c.o.d"
+  "/opt/Project/linux-com/common/utils/network/netip.c" "build_utils/CMakeFiles/utils.dir/network/netip.c.o" "gcc" "build_utils/CMakeFiles/utils.dir/network/netip.c.o.d"
+  "/opt/Project/linux-com/common/utils/network/ping.c" "build_utils/CMakeFiles/utils.dir/network/ping.c.o" "gcc" "build_utils/CMakeFiles/utils.dir/network/ping.c.o.d"
+  "/opt/Project/linux-com/common/utils/rf/rf_common.c" "build_utils/CMakeFiles/utils.dir/rf/rf_common.c.o" "gcc" "build_utils/CMakeFiles/utils.dir/rf/rf_common.c.o.d"
+  "/opt/Project/linux-com/common/utils/rf/rf_lynq.c" "build_utils/CMakeFiles/utils.dir/rf/rf_lynq.c.o" "gcc" "build_utils/CMakeFiles/utils.dir/rf/rf_lynq.c.o.d"
+  "/opt/Project/linux-com/common/utils/rf/rf_quectel.c" "build_utils/CMakeFiles/utils.dir/rf/rf_quectel.c.o" "gcc" "build_utils/CMakeFiles/utils.dir/rf/rf_quectel.c.o.d"
+  "/opt/Project/linux-com/common/utils/threads/thread.c" "build_utils/CMakeFiles/utils.dir/threads/thread.c.o" "gcc" "build_utils/CMakeFiles/utils.dir/threads/thread.c.o.d"
+  "/opt/Project/linux-com/common/utils/utest/utest.c" "build_utils/CMakeFiles/utils.dir/utest/utest.c.o" "gcc" "build_utils/CMakeFiles/utils.dir/utest/utest.c.o.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

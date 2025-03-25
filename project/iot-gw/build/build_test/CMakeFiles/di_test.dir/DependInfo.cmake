@@ -1,25 +1,22 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "/opt/Project/linux-com/project/iot-gw/test/di_test.c" "/opt/Project/linux-com/project/iot-gw/build/build_test/CMakeFiles/di_test.dir/di_test.c.o"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include/base"
-  "../../../common/utils"
-  "../../../common/service/include"
-  "../module/include"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/opt/Project/linux-com/project/iot-gw/build/build_utils/CMakeFiles/utils.dir/DependInfo.cmake"
-  "/opt/Project/linux-com/project/iot-gw/build/build_modules/CMakeFiles/iotmod.dir/DependInfo.cmake"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/opt/Project/linux-com/project/iot-gw/test/di_test.c" "build_test/CMakeFiles/di_test.dir/di_test.c.o" "gcc" "build_test/CMakeFiles/di_test.dir/di_test.c.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

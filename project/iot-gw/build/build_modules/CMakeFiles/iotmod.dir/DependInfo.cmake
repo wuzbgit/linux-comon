@@ -1,29 +1,28 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "/opt/Project/linux-com/project/iot-gw/module/src/ai.c" "/opt/Project/linux-com/project/iot-gw/build/build_modules/CMakeFiles/iotmod.dir/src/ai.c.o"
-  "/opt/Project/linux-com/project/iot-gw/module/src/di.c" "/opt/Project/linux-com/project/iot-gw/build/build_modules/CMakeFiles/iotmod.dir/src/di.c.o"
-  "/opt/Project/linux-com/project/iot-gw/module/src/do.c" "/opt/Project/linux-com/project/iot-gw/build/build_modules/CMakeFiles/iotmod.dir/src/do.c.o"
-  "/opt/Project/linux-com/project/iot-gw/module/src/led.c" "/opt/Project/linux-com/project/iot-gw/build/build_modules/CMakeFiles/iotmod.dir/src/led.c.o"
-  "/opt/Project/linux-com/project/iot-gw/module/src/rf.c" "/opt/Project/linux-com/project/iot-gw/build/build_modules/CMakeFiles/iotmod.dir/src/rf.c.o"
-  "/opt/Project/linux-com/project/iot-gw/module/src/rs485.c" "/opt/Project/linux-com/project/iot-gw/build/build_modules/CMakeFiles/iotmod.dir/src/rs485.c.o"
-  "/opt/Project/linux-com/project/iot-gw/module/src/rtc.c" "/opt/Project/linux-com/project/iot-gw/build/build_modules/CMakeFiles/iotmod.dir/src/rtc.c.o"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/opt/toolchain/t113-i/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include/base"
-  "../../../common/utils"
-  "../../../common/service/include"
-  "../module/include"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/opt/Project/linux-com/project/iot-gw/module/src/ai.c" "build_modules/CMakeFiles/iotmod.dir/src/ai.c.o" "gcc" "build_modules/CMakeFiles/iotmod.dir/src/ai.c.o.d"
+  "/opt/Project/linux-com/project/iot-gw/module/src/di.c" "build_modules/CMakeFiles/iotmod.dir/src/di.c.o" "gcc" "build_modules/CMakeFiles/iotmod.dir/src/di.c.o.d"
+  "/opt/Project/linux-com/project/iot-gw/module/src/do.c" "build_modules/CMakeFiles/iotmod.dir/src/do.c.o" "gcc" "build_modules/CMakeFiles/iotmod.dir/src/do.c.o.d"
+  "/opt/Project/linux-com/project/iot-gw/module/src/led.c" "build_modules/CMakeFiles/iotmod.dir/src/led.c.o" "gcc" "build_modules/CMakeFiles/iotmod.dir/src/led.c.o.d"
+  "/opt/Project/linux-com/project/iot-gw/module/src/rf.c" "build_modules/CMakeFiles/iotmod.dir/src/rf.c.o" "gcc" "build_modules/CMakeFiles/iotmod.dir/src/rf.c.o.d"
+  "/opt/Project/linux-com/project/iot-gw/module/src/rs485.c" "build_modules/CMakeFiles/iotmod.dir/src/rs485.c.o" "gcc" "build_modules/CMakeFiles/iotmod.dir/src/rs485.c.o.d"
+  "/opt/Project/linux-com/project/iot-gw/module/src/rtc.c" "build_modules/CMakeFiles/iotmod.dir/src/rtc.c.o" "gcc" "build_modules/CMakeFiles/iotmod.dir/src/rtc.c.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

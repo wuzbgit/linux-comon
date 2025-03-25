@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "../../out/rootfs/usr/bin/led_blink_test"
-  "../../out/rootfs/usr/bin/led_blink_test.pdb"
+  "/opt/Project/linux-com/project/iot-gw/out/rootfs/usr/bin/led_blink_test"
+  "/opt/Project/linux-com/project/iot-gw/out/rootfs/usr/bin/led_blink_test.pdb"
   "CMakeFiles/led_blink_test.dir/led_test.c.o"
+  "CMakeFiles/led_blink_test.dir/led_test.c.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

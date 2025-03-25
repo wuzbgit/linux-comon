@@ -1,0 +1,5 @@
+set(CMAKE_SYSTEM_NAME Linux)
+set(TOOLCHAIN_PATH /opt/toolchain/rk3576/aarch64-buildroot-linux-gnu_sdk-buildroot)
+set(CMAKE_C_COMPILER ${TOOLCHAIN_PATH}/bin/aarch64-buildroot-linux-gnu-gcc)
+set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PATH}/bin/aarch64-buildroot-linux-gnu-g++)
+set(CMAKE_SYSROOT ${TOOLCHAIN_PATH}/aarch64-buildroot-linux-gnu/sysroot/)

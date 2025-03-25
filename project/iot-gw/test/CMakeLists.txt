@@ -10,6 +10,7 @@ set(APP_ETH_TEST "eth_test")
 set(APP_UNIT_TEST "unit_test")
 set(APP_LED_TEST "led_blink_test")
 set(APP_MB_TEST "mb_test")
+set(APP_SENSOR_TEST "sensor_test")
 
 set(HARDWARE_LIB
   ${COMMON_LINK_LIB}
@@ -87,6 +88,12 @@ target_link_libraries(${APP_UNIT_TEST}
   -Wl,--end-group
 )
 
+add_executable(${APP_SENSOR_TEST} sensor_rs485.c)
+target_link_libraries(${APP_SENSOR_TEST}
+  -Wl,--start-group
+  ${HARDWARE_LIB}
+  -Wl,--end-group
+)
 
 # add_executable(${APP_MB_TEST} mb_test.cpp)
 # target_link_libraries(${APP_MB_TEST}
