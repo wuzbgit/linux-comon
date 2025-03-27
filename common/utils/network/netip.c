@@ -267,7 +267,7 @@ static int down_netif(const char *netif)
         goto exit_;
     }
 
-    strlcpy(ifr.ifr_name, netif, sizeof(ifr.ifr_name));
+    strncpy(ifr.ifr_name, netif, sizeof(ifr.ifr_name));
 
     ifr.ifr_flags &= ~(IFF_UP |IFF_RUNNING);
     if( ioctl( sockfd, SIOCSIFFLAGS, &ifr ) < 0 )   
@@ -307,7 +307,7 @@ static int up_netif(const char *netif)
         goto exit_;
     }
 
-    strlcpy(ifr.ifr_name, netif, sizeof(ifr.ifr_name));
+    strncpy(ifr.ifr_name, netif, sizeof(ifr.ifr_name));
 
     /* Read interface flags */
     if (ioctl(sockfd, SIOCGIFFLAGS, &ifr) < 0) {
@@ -315,7 +315,7 @@ static int up_netif(const char *netif)
         goto exit_;
     }
 
-    strlcpy(ifr.ifr_name, netif, sizeof(ifr.ifr_name));
+    strncpy(ifr.ifr_name, netif, sizeof(ifr.ifr_name));
 
     ifr.ifr_flags |= IFF_UP |IFF_RUNNING;
     if( ioctl( sockfd, SIOCSIFFLAGS, &ifr ) < 0 )

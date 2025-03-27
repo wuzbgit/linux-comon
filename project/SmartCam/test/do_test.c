@@ -6,44 +6,33 @@
 #include <errno.h>
 #include <getopt.h>
 #include <sys/ioctl.h>  
+#include "do.h"
 
 static int do_test()
 {
     int level;
     int ret = 0;
-    int i;
-
-    ret = do_init();
-    if (ret != 0) {
-        printf ("do channel test fail:do init fail\n");
-
-        return -1;
-    }
 
     while (1)
     {
         level = 1;
-        for (i = 0; i < 4; i++) {
-            ret = do_out(i, level);
-            if (ret < 0) {
-                printf ("do channel %d test fail:do out error\n",i);
-
-                return -1;
-            }
-            printf("do setting high\n");
+        printf("do setting high\n");
+        ret = do_set_value(level);
+        if (ret != 0) {
+            printf("do set value failed\n");
+            return -1;
         }
         usleep(3000 * 2000);
 
         level = 0;
-        for (i = 0; i < 4; i++) {
-            ret = do_out(i, level);
-            if (ret < 0) {
-                printf ("do channel %d test fail:do out error\n",i);
 
-                return -1;
-            }
-            printf("do setting low\n");
+        printf("do setting low\n");
+        ret = do_set_value(level);
+        if (ret != 0) {
+            printf("do set value failed\n");
+            return -1;
         }        
+
         usleep(3000 * 2000);
     }    
 
@@ -127,9 +116,11 @@ int main(int argc,char *argv[])
             }
         }
 
-        do_init();
-        
-        do_out(channel, lvl);
+        ret = do_set_value(lvl);
+        if (ret != 0) {
+            printf("do set value failed\n");
+            return -1;
+        }        
     }
 
     return ret;

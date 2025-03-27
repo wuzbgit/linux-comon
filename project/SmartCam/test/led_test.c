@@ -8,6 +8,17 @@
 #include <unistd.h>
 #include "led.h"
 
+static int led_blink_test()
+{
+    int ret = 0;
+
+    ret = led_blink(LED_USER0);
+    ret |= led_blink(LED_USER1);
+    ret |= led_blink(LED_USER2);
+    
+    return ret;
+}
+
 int main(int argc,char *argv[])
 {
     int ret = 0;

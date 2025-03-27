@@ -7,7 +7,7 @@
 #include "led.h"
 
 struct iotgw_leds {
-    e_IOTGW_LED led;
+    LED_e led;
     char *led_path;
 };
 
@@ -23,15 +23,7 @@ static struct iotgw_leds leds[] = {
     {
         .led = LED_USER2,
         .led_path = "/sys/class/leds/user-led2"
-    },
-    {
-        .led = LED_USER3,
-        .led_path = "/sys/class/leds/user-led3"
-    },
-    {
-        .led = LED_USER4,
-        .led_path = "/sys/class/leds/user-led4"
-    }                
+    }               
 };
 
 int led_write(char *path, int i)
@@ -59,7 +51,7 @@ int led_write(char *path, int i)
     return 0;
 }
 
-int led_brightness_path(e_IOTGW_LED led,char *led_path)
+int led_brightness_path(LED_e led,char *led_path)
 {
     int i;
     unsigned cnt = sizeof(leds)/sizeof(leds[0]);
@@ -76,7 +68,7 @@ int led_brightness_path(e_IOTGW_LED led,char *led_path)
     return led_path;
 }
 
-int led_on(e_IOTGW_LED led)
+int led_on(LED_e led)
 {
     char *path = NULL;
     char led_path[128] = {0};
@@ -92,7 +84,7 @@ int led_on(e_IOTGW_LED led)
     return ret;
 }
 
-int led_off(e_IOTGW_LED led)
+int led_off(LED_e led)
 {
     char *path = NULL;
     char led_path[128] = {0};
@@ -108,7 +100,7 @@ int led_off(e_IOTGW_LED led)
     return ret;
 }
 
-int led_blink(e_IOTGW_LED led)
+int led_blink(LED_e led)
 {
     int ret = 0;
     int i;
@@ -129,18 +121,5 @@ int led_blink(e_IOTGW_LED led)
         ret = -1;
     }
 
-    return ret;
-}
-
-int led_blink_test()
-{
-    int ret = 0;
-
-    ret = led_blink(LED_USER0);
-    ret |= led_blink(LED_USER1);
-    ret |= led_blink(LED_USER2);
-    ret |= led_blink(LED_USER3);
-    ret |= led_blink(LED_USER4);
-    
     return ret;
 }

@@ -8,16 +8,14 @@ extern "C" {
 typedef enum {
     LED_USER0,
     LED_USER1,
-    LED_USER2,
-    LED_USER3,
-    LED_USER4
-}e_IOTGW_LED;
+    LED_USER2
+}LED_e;
 
-int led_on(e_IOTGW_LED led);
+int led_on(LED_e led);
 
-int led_off(e_IOTGW_LED led);
+int led_off(LED_e led);
 
-int led_blink(e_IOTGW_LED led);
+int led_blink(LED_e led);
 
 #ifdef __cplusplus
 }
