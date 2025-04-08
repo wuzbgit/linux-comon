@@ -68,6 +68,10 @@ if(("${BUILD_MODULE}" MATCHES "all") OR ("${BUILD_MODULE}" MATCHES "app") OR ("$
     add_subdirectory(${PROJECT_MODULE_PATH} build_modules)
     set(MODULE_LIB "cam_mod")
   endif()
+  if(EXISTS ${TOP_DIR}/external/cJSON)
+    add_subdirectory(${TOP_DIR}/external/cJSON build_external)
+    include_directories(${TOP_DIR}/external)
+  endif()
 endif()
 
 if(("${BUILD_MODULE}" MATCHES "all") OR ("${BUILD_MODULE}" MATCHES "app"))

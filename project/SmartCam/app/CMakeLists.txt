@@ -14,12 +14,15 @@ set(APP_BOARD_LIB
   ${MODULE_LIB}
 )
 
-add_executable(${APP_VIDEO_DAEMON} video_daemon.c tcp_server.c video.c alg.c gstreamer_pipe.c ringbuffer.c)
+# target_include_directories(${APP_VIDEO_DAEMON} PRIVATE ${TOP_DIR}/external/)
+add_subdirectory(command)
+add_executable(${APP_VIDEO_DAEMON} video_daemon.c tcp_server.c video.c alg.c gstreamer_pipe.c ringbuffer.c ${COMMAND_SOURCES})
 target_link_libraries(${APP_VIDEO_DAEMON}
   -Wl,--start-group
   ${GSTREAMER_LIBRARIES}
   ${GSTREAMER_APP_LIBRARIES}
   pthread
+  cjson
   -Wl,--end-group
 )
 
